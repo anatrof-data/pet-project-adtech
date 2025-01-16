@@ -3,7 +3,7 @@ init:
 	pip install -r requirements-dev.txt
 
 codestyle:
-	python -m pylint --disable=import-error,no-name-in-module **/*.py
+	python -m pylint **/*.py
 
 test:
 	python -m unittest discover -s . -p "*tests*.py"
