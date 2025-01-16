@@ -19,16 +19,13 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
+          pip install --upgrade pip
           make init
 
       - name: Run code style checks
         run: |
-          source venv/bin/activate  
           make codestyle
 
-      - name: Run tests and generate coverage
+      - name: Run tests
         run: |
-          source venv/bin/activate
           make test
