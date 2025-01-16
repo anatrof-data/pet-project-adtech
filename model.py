@@ -19,10 +19,10 @@ train_features, val_features, train_labels, val_labels = train_test_split(
 
 # Build the neural network model
 model = Sequential([
-    Input(shape=(train_features.shape[1],)),  # Input layer with shape based on features
-    Dense(128, activation='relu'),           # Hidden layer 1
-    Dense(64, activation='relu'),            # Hidden layer 2
-    Dense(1)                                 # Output layer
+    Input(shape=(train_features.shape[1],)),
+    Dense(128, activation='relu'),
+    Dense(64, activation='relu'),
+    Dense(1)
 ])
 
 # Compile the model
