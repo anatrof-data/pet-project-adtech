@@ -1,1 +1,1 @@
-Flake8
+Flake8=7.1.1
