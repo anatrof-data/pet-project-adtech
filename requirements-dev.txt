@@ -1,2 +1,1 @@
-pylint
-pylint-tensorflow
+Flake8

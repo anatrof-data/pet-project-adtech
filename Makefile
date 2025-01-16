@@ -3,7 +3,7 @@ init:
 	pip install -r requirements-dev.txt
 
 codestyle:
-	python -m pylint **/*.py
+	flake8 .
 
 test:
 	python -m unittest discover -s . -p "*tests*.py"
