@@ -18,10 +18,17 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
-        run: make init
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          make init
 
       - name: Run code style checks
-        run: make codestyle
+        run: |
+          source venv/bin/activate  
+          make codestyle
 
       - name: Run tests and generate coverage
-        run: make test
+        run: |
+          source venv/bin/activate
+          make test
