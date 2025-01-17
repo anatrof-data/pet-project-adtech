@@ -9,6 +9,7 @@ from src.data_preprocessing import (
 from src.train import train_model
 from src.evaluate import plot_training_history
 
+
 def main():
     # Ensure directories exist
     ensure_directory_exists('models')
@@ -49,6 +50,7 @@ def main():
 
     # Plot training history
     plot_training_history(history)
+
 
 if __name__ == "__main__":
     main()
