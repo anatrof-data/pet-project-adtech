@@ -9,5 +9,5 @@ def build_model(input_shape):
         Dense(64, activation='relu'),
         Dense(1)
     ])
-    model.compile(optimizer='adam', loss='mae')
+    model.compile(optimizer='adam', loss='mae', metrics=['mae'])
     return model

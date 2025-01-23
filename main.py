@@ -45,8 +45,7 @@ def main():
     ]
     dataset = scale_features(dataset, columns_for_scaling)
 
-    # Train the model
-    history = train_model(dataset)
+    history = train_model(dataset, batch_size=256, epochs=100)
 
     # Plot training history
     plot_training_history(history)
