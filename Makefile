@@ -6,4 +6,4 @@ codestyle:
 	flake8 .
 
 test:
-	python -m unittest discover -s tests -p "*tests*.py"
+	python3 -m unittest discover -s tests -p "*tests*.py"

@@ -1,4 +1,5 @@
-from src.utils import ensure_directory_exists
+import os
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
 from src.data_preprocessing import (
     load_data,
     transform_data,
@@ -11,10 +12,6 @@ from src.evaluate import plot_training_history
 
 
 def main():
-    # Ensure directories exist
-    ensure_directory_exists('models')
-    ensure_directory_exists('data')
-
     file_path = 'data/dataset-adtech.csv'
     # Load data
     dataset = load_data(file_path)
@@ -28,7 +25,7 @@ def main():
     ]
     dataset = handle_outliers(dataset, columns_for_handle_outliers)
 
-    # Correlation amalysis
+    # Correlation analysis
     columns_for_corr_analysis = [
         'day', 'total_impressions', 'viewable_impressions',
         'measurable_impressions', 'total_revenue'
